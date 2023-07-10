@@ -1,0 +1,218 @@
+* {
+    /* This is called a reset */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0c192c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#642bff, #ff22e6);
+    border-radius: 10px;
+}
+
+
+
+body {
+    font-family: Arial;
+    background-color: #0c192c;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* Horizontal centering */
+
+    /*   background: url(images/1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center; */
+
+}
+
+
+
+.toDisplay,
+.inputs-css {
+    display: grid;
+    grid-template-columns: 25vw 15vw 10vw;
+    column-gap: 15px;
+    align-items: center;
+    row-gap: 15px;
+
+}
+
+.toDisplay {
+    color: white;
+}
+
+.inputs-css {
+    margin-bottom: 15px;
+    align-items: stretch;
+}
+
+.alone-inputs,
+.dueDateInput {
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(200, 200, 200, 0.2);
+
+}
+
+.alone-inputs {
+    color: white;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.5;
+    text-align: center;
+}
+
+.dueDateInput {
+    text-align: center;
+    max-width: 150px;
+}
+
+.add-btn {
+    background-color: green;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    overflow: hidden;
+    max-width: 100px;
+    padding: 5px;
+}
+
+.delete-Btn {
+    background-color: darkred;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    overflow: hidden;
+    max-width: 100px;
+}
+
+.dueDates {
+    color: white;
+    text-align: center;
+    background-color: rgba(200, 200, 200, 0.2);
+    padding: 6px 8px 6px 8px;
+    border-radius: 6px;
+    background-color: rgba(200, 200, 200, 0.2);
+    overflow: hidden;
+    max-width: 150px;
+
+}
+
+.names {
+    color: white;
+    text-align: center;
+    word-break: break-all;
+    background-color: rgba(200, 200, 200, 0.2);
+    padding: 5px;
+    border-radius: 6px;
+    /*
+    overflow: hidden;
+    text-overflow: ellipsis;
+*/
+}
+
+.myFrame {
+    backdrop-filter: blur(200rem);
+
+    margin-top: 8vh;
+    /* max-width: fit-content; */
+    border: none;
+    /*background-color: rgba(200, 200, 200, 0.2);*/
+    background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0.1));
+
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    margin-top: 1vh;
+    font-size: 2rem;
+    font-family: Cambria;
+    margin-bottom: 2vh;
+}
+
+@media screen and (min-width: 1000px) {
+
+    .toDisplay,
+    .inputs-css {
+        display: grid;
+        grid-template-columns: 25vw 150px 100px;
+        column-gap: 15px;
+        align-items: center;
+        row-gap: 15px;
+
+    }
+
+    .alone-inputs, .names {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .delete-Btn {
+        width: fit-content;
+
+    }
+
+    .add-btn {
+        width: 50px;
+    }
+
+    .title {
+        font-size: 8vw;
+    }
+
+    .dueDates {
+        padding: 2px;
+        font-size: small;
+    }
+
+    .dueDateInput {
+        font-size: small;
+        /* width: 50px; */
+        overflow: hidden;
+    }
+
+    .myFrame {
+        width: 100vw;
+        padding: 10px;
+    }
+
+    .toDisplay, .inputs-css {
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr;
+        column-gap: 15px;
+        align-items: center;
+        row-gap: 15px;
+        margin-right: 0;
+    }
+
+    .alone-inputs {
+        width: 52vw;
+    }
+}
